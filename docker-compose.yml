@@ -6,9 +6,7 @@ services:
       dockerfile: ./Dockerfile
     volumes:
       - .:/app
-    command: ["mitmdump", "--server-replay", "scripts/locust.bin", "--no-server-replay-refresh", "--server-replay-kill-extra", "--set upstream_cert=false", "--server-replay-nopop"]
-    ports:
-      - "8080"
+
 
 networks:
   default:
